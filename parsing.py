@@ -11,8 +11,6 @@ def parameterize(decorator: Callable) -> Callable:
     """
     Function for decorating decorators with parameters
 
-    Based on -> https://stackoverflow.com/questions/46734219/flask-error-with-two-parameterized-functions
-
     :param decorator: a decorator
     :type decorator: Callable
     """
