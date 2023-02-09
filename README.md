@@ -6,7 +6,7 @@
     
     
     
-A collection parametrized parsing and validation decorators for python metaprogramming. Self-contained to avoid dependency clashing.
+A collection of parametrized parsing and validation decorators for python metaprogramming. Self-contained to avoid dependency clashing.
 
 ##### Installation      
 `pip install PPVD`
