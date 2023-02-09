@@ -180,6 +180,57 @@ def validate_path(function: Callable, pos: int = 0) -> Callable:
 
 
 @parameterize
+def validate_range(function: Callable, r_min: float, r_max: float, pos: int = 0) -> Callable:
+    """
+    Decorator to validate value is within range
+
+    :param function: function to be decorated
+    :type function: Callable
+    :param r_min: minimum
+    :type r_min: float
+    :param r_max: maximum
+    :type r_max: float
+    :param pos: index of the argument to be validated
+    :type pos: int
+    """
+    @wraps(function)
+    def decorator(*args, **kwargs):
+        val = args[pos]
+
+        if not r_min <= val <= r_max:
+            raise ValueError(f"{TerminalStyle.GREEN}Input {pos}: {TerminalStyle.YELLOW} value "
+                             f"{TerminalStyle.BLUE}{args[pos]} {TerminalStyle.YELLOW} out of range"
+                             f"{TerminalStyle.BLUE}{r_min}-{r_max}{TerminalStyle.RESET}")
+        # noinspection PyArgumentList
+        return function(*args, **kwargs)
+    return decorator
+
+
+@parameterize
+def validate_strong_type(function: Callable, required: type, pos: int = 0) -> Callable:
+    """
+    Decorator for strong typing only one argument
+
+    :param function: function to be decorated
+    :type function: Callable
+    :param required: required type
+    :type required: type
+    :param pos: index of the argument to be validated
+    :type pos: int
+    """
+    @wraps(function)
+    def decorator(*args, **kwargs):
+        var = args[pos]
+        if not isinstance(var, required):
+            raise AssertionError(f"{TerminalStyle.GREEN}Input {pos}:{TerminalStyle.YELLOW} must be{TerminalStyle.BLUE} "
+                                 f"{required}{TerminalStyle.YELLOW} not {TerminalStyle.BLUE}{type(var)}"
+                                 f"{TerminalStyle.RESET}")
+        # noinspection PyArgumentList
+        return function(*args, **kwargs)
+    return decorator
+
+
+@parameterize
 def validate_tensor(function: Callable, pos: int = 0) -> Callable:
     """
     Decorator to assert argument is a tensor
