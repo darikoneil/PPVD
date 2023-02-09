@@ -1,5 +1,6 @@
 from __future__ import annotations
 import os.path
+import pathlib
 from typing import Callable, Tuple, Any, List
 from functools import wraps
 from .style import TerminalStyle
