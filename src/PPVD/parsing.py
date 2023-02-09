@@ -35,7 +35,7 @@ def convert_permitted_types_to_required(function: Callable, permitted: Tuple, re
     :param function: function to be decorated
     :type function: Callable
     :param permitted: permitted types
-    :type permitted: Tuple
+    :type permitted: tuple
     :param required: type required by code
     :type required: Any
     :param pos: index of argument to be converted
@@ -123,7 +123,7 @@ def amend_args(arguments: Tuple, amendment: Any, pos: int = 0) -> Tuple:
     Function amends arguments tuple (~scary tuple mutation~)
 
     :param arguments: arguments to be amended
-    :type arguments: Tuple
+    :type arguments: tuple
     :param amendment: new value of argument
     :type amendment: Any
     :param pos: index of argument to be converted
@@ -142,7 +142,7 @@ def append_args(arguments: Tuple, value: Any) -> Tuple:
     Function appends arguments tuple (~scary tuple mutation~)
 
     :param arguments: arguments to be appended
-    :type arguments: Tuple
+    :type arguments: tuple
     :param value: new value of argument
     :type value: Any
     :return: appended arguments
