@@ -1,8 +1,16 @@
 ### Parametrized Parsing and Validation Decorators 
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/darikoneil/PPVD/blob/master/LICENSE)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/darikoneil/PPVD/graphs/commit-activity)
-[![Documentation Status](https://readthedocs.org/projects/calscipy/badge/?version=latest)](https://ppvd.readthedocs.io/en/latest/?badge=latest)
-[![PyPi](https://badgen.net/badge/icon/pypi?icon=pypi&label)](https://pypi.org/project/PPVD/)
+## PPVD       
+<!-- Line 1 Badges... PyPi, Downloads, Maintained, Coverage, Documentation -->
+<!-- Line 2 Badges... Python Versions, PyPi Status, License, Contributors-->
+![PyPI](https://img.shields.io/pypi/v/PPVD)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/PPVD)
+![Maintenance](https://img.shields.io/maintenance/yes/2023)
+![Coveralls branch](https://img.shields.io/coverallsCoverage/github/darikoneil/PPVD?branch=master)
+[![Documentation Status](https://readthedocs.org/projects/PPVD/badge/?version=latest)](https://PPVD.readthedocs.io/en/latest/?badge=latest)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PPVD?)
+![PyPI - Status](https://img.shields.io/pypi/status/PPVD)
+![GitHub](https://img.shields.io/github/license/darikoneil/PPVD)
+[![Contributors](https://img.shields.io/github/contributors-anon/darikoneil/PPVD)](https://github.com/darikoneil/PPVD/graphs/contributors)
     
     
     
