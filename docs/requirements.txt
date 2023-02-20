@@ -3,4 +3,7 @@ coveralls
 pytest
 pytest-progress
 pyyaml
+sphinx
+sphinx-rtd-theme
+sphinx-autodoc-typehints
 toml
