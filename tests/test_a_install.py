@@ -44,8 +44,11 @@ print(f"\n{TerminalStyle.YELLOW}Package: {TerminalStyle.BLUE}{pkg_name}{Terminal
 print(f"{TerminalStyle.YELLOW}Version: {TerminalStyle.BLUE}{pkg_version}{TerminalStyle.RESET}")
 print(f"{TerminalStyle.YELLOW}Dependencies: {TerminalStyle.BLUE}{pkg_dependencies}{TerminalStyle.RESET}")
 
+print(f"\n{proj_dir}\n")
+
 
 @pytest.mark.parametrize("path", [proj_dir])
 def test_install(path):
     os.chdir(path)
+    print(f"{os.getcwd()}")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "-e ."])
