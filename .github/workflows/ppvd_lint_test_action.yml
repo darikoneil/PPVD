@@ -1,4 +1,4 @@
-name: PPVD System Testing
+name: PPVD Linting and Testing
 
 on:
   push:
