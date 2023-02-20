@@ -40,3 +40,13 @@ addopts = [
 ]
 testpaths = "tests"
 console_output_style = "progress"
+
+[tool.coverage.run]
+branch = true
+command_line = "-m pytest"
+
+[tool.coverage.report]
+fail_under = 75
+
+[tool.coverage.json]
+pretty_print = true
