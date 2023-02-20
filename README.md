@@ -11,7 +11,7 @@
 ![PyPI - Status](https://img.shields.io/pypi/status/PPVD)
 ![GitHub](https://img.shields.io/github/license/darikoneil/PPVD)
 [![Contributors](https://img.shields.io/github/contributors-anon/darikoneil/PPVD)](https://github.com/darikoneil/PPVD/graphs/contributors)
-[![PPVD](https://github.com/darikoneil/PPVD/actions/workflows/ppvd_lint_test_action.yml/badge.svg)](https://github.com/darikoneil/PPVD/actions/workflows/ppvd_lint_test_action.yml)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/darikoneil/PPVD/ppvd_lint_test_action.yml)
     
     
 A collection of parametrized parsing and validation decorators for python metaprogramming. Self-contained to avoid dependency clashing. Use pos argument for single argument specificity.
