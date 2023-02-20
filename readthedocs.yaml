@@ -21,4 +21,4 @@ formats:
     - htmlzip
 python:
   install:
-    - requirements: docs/requirements.txt
+    - requirements: docs/rtd_requirements.txt
