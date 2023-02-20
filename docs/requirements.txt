@@ -1,4 +1,6 @@
-coverage
+coverage[toml]
+coveralls
 pytest
 pytest-progress
+pyyaml
 toml
