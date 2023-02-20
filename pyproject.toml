@@ -21,10 +21,6 @@ classifiers = [
     "Programming Language :: Python"
 ]
 
-[project.urls]
-documentation = "https://github.com/darikoneil/PPVD
-repository = "https://github.com/darikoneil/PPVD"
-
 dependencies = [
 ]
 
