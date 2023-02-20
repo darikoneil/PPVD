@@ -71,7 +71,7 @@ def if_dir_join_filename(function: Callable, default_name: str, flag_pos: int = 
     @wraps(function)
     def decorator(*args, **kwargs):
         if isdir(args[flag_pos]):
-            args = amend_args(args, "".join([args[flag_pos], "\\", default_name]), flag_pos)
+            args = amend_args(args, os.path.join(args[flag_pos], default_name), flag_pos)
         # noinspection PyArgumentList
         return function(*args, **kwargs)
     return decorator
@@ -92,7 +92,7 @@ def if_dir_append_filename(function: Callable, default_name: str, flag_pos: int 
     @wraps(function)
     def decorator(*args, **kwargs):
         if isdir(args[flag_pos]):
-            args = append_args(args, "".join([args[flag_pos], "\\", default_name]))
+            args = append_args(args, os.path.join(args[flag_pos], default_name))
         # noinspection PyArgumentList
         return function(*args, **kwargs)
     return decorator
@@ -112,7 +112,7 @@ def require_full_path(function: Callable, pos: int = 0) -> Callable:
     def decorator(*args, **kwargs):
         _input = str(args[pos])
         if isdir(_input):
-            args = amend_args(args, "".join([getcwd(), "\\", _input]), pos)
+            args = amend_args(args, os.path.join(getcwd(), _input), pos)
         # noinspection PyArgumentList
         return function(*args, **kwargs)
     return decorator

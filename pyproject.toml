@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "PPVD"
-version = "0.0.1"
+version = "0.0.2"
 description = "A collection parametrized parsing and validation decorators for python metaprogramming. Self-contained to avoid dependency clashing."
 readme = "README.md"
 requires-python = ">=3.7, <4"
@@ -21,5 +21,19 @@ classifiers = [
     "Programming Language :: Python"
 ]
 
+[project.urls]
+documentation = "https://github.com/darikoneil/PPVD
+repository = "https://github.com/darikoneil/PPVD"
+
 dependencies = [
 ]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+    "-s",
+    "--color=yes",
+    "--show-progress",
+]
+testpaths = "tests"
+console_output_style = "progress"

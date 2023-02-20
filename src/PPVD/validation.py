@@ -53,7 +53,7 @@ def validate_exists(function: Callable, pos: int = 0) -> Callable:
         string_input = str(args[pos])
         if not exists(string_input):
             raise FileNotFoundError(f"{TerminalStyle.GREEN}Invalid Path: "
-                             f"{TerminalStyle.YELLOW} could not locate the given path"
+                                    f"{TerminalStyle.YELLOW} could not locate the given path"
                                     f"{TerminalStyle.BLUE}{string_input} {TerminalStyle.RESET}")
         # noinspection PyArgumentList
         return function(*args, **kwargs)
@@ -164,12 +164,12 @@ def validate_path(function: Callable, pos: int = 0) -> Callable:
     @wraps(function)
     def decorator(*args, **kwargs):
         string_input = str(args[pos])
-        if [_char for _char in list(string_input) if _char is ":"].__len__() != 1:
+        if [_char for _char in list(string_input) if _char in [":", "usr", "Users"]].__len__() != 1:
             raise ValueError(f"{TerminalStyle.GREEN}Invalid Path: "
                              f"{TerminalStyle.YELLOW}no root detected in the given path "
                              f"{TerminalStyle.BLUE}{string_input} "
                              f"{TerminalStyle.RESET}")
-        if not set(string_input) <= set(string.ascii_letters + string.digits + "." + "\\" + ":" + "-" + "_"):
+        if not set(string_input) <= set(string.ascii_letters + string.digits + "." + "/" + "\\" + ":" + "-" + "_"):
             raise ValueError(f"{TerminalStyle.GREEN}Invalid Path: "
                              f"{TerminalStyle.YELLOW}filenames are limited to standard letters, digits, backslash, "
                              f"colon, hyphen, and underscore only."

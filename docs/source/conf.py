@@ -2,45 +2,52 @@ import os
 import sys
 import pathlib
 
-sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0, os.path.abspath('../'))
-sys.path.insert(0, os.path.abspath('../../'))
 
+# IMPORTS ps I can be done not so dumbly
+sys.path.insert(0, os.path.dirname(os.path.dirname(os. getcwd())))
 
-project = 'PPVD'
+# get package details directly from pyproject
+pyproject_file = "".join([os.path.dirname(os.path.dirname(os. getcwd())), "\\pyproject.toml"])
+package_details = toml.load(pyproject_file).get("project")
+
+project = package_details.get("name")
 copyright = "2023, Darik A. O'Neil"
 author = "Darik A. O'Neil"
-release = '0.0.1'
-
-# -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+release = package_details.get("version")
 
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosectionlabel',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.viewcode',
-    'sphinx_autodoc_typehints']
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosectionlabel",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.viewcode",
+    "sphinx_autodoc_typehints"]
 
-typehints_defaults = 'comma'
-templates_path = ['_templates']
-exclude_patterns = []
+typehints_defaults = "comma"
 
 
-language = '[en]'
+source_suffix = ".rst"
+
+language = "en"
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3', None),
+    "python": ("https://docs.python.org/3", None),
+    "numpy": ("https://numpy.org/doc/1.24/", None),
 }
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = "sphinx_rtd_theme"
 
 module_names = (
     "parsing",
     "style",
     "validation",
 )
+
+pygments_style = "sphinx"
+
+latex_engine = "pdflatex"
+
+todo_include_todos = True
 
 parent = str(pathlib.Path(os.getcwd()).parents[1])
 sys.path.append("".join([parent, "\\src\\PPVD"]))
