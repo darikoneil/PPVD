@@ -6,7 +6,7 @@
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/PPVD)
 ![Maintenance](https://img.shields.io/maintenance/yes/2023)
 [![Coverage Status](https://coveralls.io/repos/github/darikoneil/PPVD/badge.svg?branch=main)](https://coveralls.io/github/darikoneil/PPVD?branch=main)
-[![Documentation Status](https://readthedocs.org/projects/PPVD/badge/?version=latest)](https://PPVD.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/ppvd/badge/?version=latest)](https://ppvd.readthedocs.io/en/latest/?badge=latest)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PPVD?)
 ![PyPI - Status](https://img.shields.io/pypi/status/PPVD)
 ![GitHub](https://img.shields.io/github/license/darikoneil/PPVD)
