@@ -2,9 +2,9 @@ name: PPVD
 
 on:
   push:
-    branches: [ "master", "staging"]
+    branches: [ "main", "staging"]
   pull_request:
-    branches: [ "master", "development", "staging"]
+    branches: [ "main", "development", "staging"]
 
 jobs:
   build:
