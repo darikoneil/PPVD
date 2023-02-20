@@ -164,7 +164,8 @@ def validate_path(function: Callable, pos: int = 0) -> Callable:
     @wraps(function)
     def decorator(*args, **kwargs):
         string_input = str(args[pos])
-        if [_char for _char in list(string_input) if _char in [":", "usr", "Users"]].__len__() != 1:
+        if not [root for root in [":", "usr", "/home/", "/users/", "/tmp/pytest-of-runner/", "/private/var/folders/"]
+                if root in string_input.lower()]:
             raise ValueError(f"{TerminalStyle.GREEN}Invalid Path: "
                              f"{TerminalStyle.YELLOW}no root detected in the given path "
                              f"{TerminalStyle.BLUE}{string_input} "

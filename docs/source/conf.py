@@ -7,7 +7,7 @@ import pathlib
 sys.path.insert(0, os.path.dirname(os.path.dirname(os. getcwd())))
 
 # get package details directly from pyproject
-pyproject_file = "".join([os.path.dirname(os.path.dirname(os. getcwd())), "\\pyproject.toml"])
+pyproject_file = os.path.join(os.path.dirname(os.path.dirname(os. getcwd())), "pyproject.toml")
 package_details = toml.load(pyproject_file).get("project")
 
 project = package_details.get("name")
@@ -37,20 +37,8 @@ intersphinx_mapping = {
 
 html_theme = "sphinx_rtd_theme"
 
-module_names = (
-    "parsing",
-    "style",
-    "validation",
-)
-
 pygments_style = "sphinx"
 
 latex_engine = "pdflatex"
 
 todo_include_todos = True
-
-parent = str(pathlib.Path(os.getcwd()).parents[1])
-sys.path.append("".join([parent, "\\src\\PPVD"]))
-sys.path.append("".join([parent, "\\src"]))
-for _module in module_names:
-    sys.path.append("".join([parent, "\\src\\PPVD\\", _module]))
