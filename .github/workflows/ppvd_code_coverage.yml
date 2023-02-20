@@ -33,7 +33,7 @@ jobs:
         coverage json --pretty-print
     - name: Coveralls
       run: |
-        coveralls --service=github
+        coveralls --service=github-actions
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         github-token: ${{ secrets.GITHUB_TOKEN }}
