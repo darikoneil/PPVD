@@ -50,3 +50,6 @@ fail_under = 75
 
 [tool.coverage.json]
 pretty_print = true
+
+[tool.coverage.lcov]
+output = "C:\\lcov_output.lcov
