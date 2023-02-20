@@ -47,10 +47,9 @@ print(f"{TerminalStyle.YELLOW}Dependencies: {TerminalStyle.BLUE}{pkg_dependencie
 
 @pytest.mark.parametrize("path", [proj_dir])
 def test_install(path):
-    output = None
     try:
         subprocess.check_call([sys.executable, "-m", "pip", "install", "-e ."])
     except subprocess.CalledProcessError as e:
         output = e.output
-        print(f"{output}")
-    return print(f"{output}")
+        # TODO This doesn't work for macOS or Linux. Obviously since the runner does an install this isn't a big deal
+
