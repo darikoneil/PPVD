@@ -30,9 +30,9 @@ def validate_evenly_divisible(function: Callable, numerator=0, denominator=1, ax
 
         if numerator_val.shape[axis] // denominator_val != numerator_val.shape[axis] / denominator_val:
             raise AssertionError(f"{TerminalStyle.GREEN}Not Evenly Divisible: "
-                                    f"{TerminalStyle.BLUE}{numerator_val.shape[axis]}{TerminalStyle.YELLOW}"
-                                    f"not evenly divisible by {TerminalStyle.BLUE}{denominator_val} "
-                                    f"{TerminalStyle.RESET}")
+                                 f"{TerminalStyle.BLUE}{numerator_val.shape[axis]}{TerminalStyle.YELLOW}"
+                                 f"not evenly divisible by {TerminalStyle.BLUE}{denominator_val} "
+                                 f"{TerminalStyle.RESET}")
         # noinspection PyArgumentList
         return function(*args, **kwargs)
     return decorator
@@ -144,8 +144,8 @@ def validate_numpy_type(function: Callable, required_dtype: str, pos: int = 0) -
     def decorator(*args, **kwargs):
         if args[pos].dtype != required_dtype:
             raise TypeError(f"{TerminalStyle.GREEN}Input {pos} Invalid Type: "
-                        f"{TerminalStyle.YELLOW}the required type is "
-                        f"{TerminalStyle.BLUE}{required_dtype}{TerminalStyle.RESET}")
+                            f"{TerminalStyle.YELLOW}the required type is "
+                            f"{TerminalStyle.BLUE}{required_dtype}{TerminalStyle.RESET}")
         # noinspection PyArgumentList
         return function(*args, **kwargs)
     return decorator
