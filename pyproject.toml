@@ -52,4 +52,4 @@ fail_under = 75
 pretty_print = true
 
 [tool.coverage.lcov]
-output = "\tmp\lcov_output.lcov"
+output = "C:/coverage.lcov"
