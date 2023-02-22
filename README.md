@@ -14,8 +14,10 @@
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/darikoneil/PPVD/ppvd_lint_test_action.yml)
     
     
-A collection of parametrized parsing and validation decorators for python metaprogramming. Self-contained to avoid dependency clashing. Use pos argument for single argument specificity.
+Validate/parse/strong-type specific arguments to a function while remaining pythonistic otherwise. A collection of parametrized parsing and validation decorators for python metaprogramming. Self-contained to avoid dependency clashing. Use pos argument for single argument specificity.
 
+
+Not finished. Aspirational feature is to pass class fr property/relational assertions and alleviate chaining more than one decorator per argument
 
 ##### Installation      
 `pip install PPVD`
