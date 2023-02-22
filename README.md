@@ -21,3 +21,5 @@ Not finished. Aspirational feature is to pass class fr property/relational asser
 
 ##### Installation      
 `pip install PPVD`
+
+##### Migrating to larger & cooler package, stay tuned
